@@ -194,7 +194,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES
-(1, 'Test User One', 'test_user1@gmail.com', '$2y$10$yQJXbdOUZ7gy/G7bAM2CduBmYtCsflWpqQRvdhcgdtK5ANAvxWU2i', 'customer', '2025-02-24 04:15:08', '2025-02-24 22:04:36'),
+(1, 'Test User One', 'test_user@gmail.com', '$2y$10$yQJXbdOUZ7gy/G7bAM2CduBmYtCsflWpqQRvdhcgdtK5ANAvxWU2i', 'customer', '2025-02-24 04:15:08', '2025-02-24 22:04:36'),
 (2, 'Test Admin', 'test_admin@gmail.com', '$2y$10$XdIgZU5/9BkNiLO5a2jy4uFf9/aoMA/QtHf0p6lZ8GNUx.B67/s.u', 'admin', '2025-02-24 04:15:55', '2025-02-24 04:15:55'),
 (3, 'Abdul', 'abdul@gmail.com', '$2y$10$tbVtdhBqCRtZ7FeiGVpByuAHopa5p6tMMn38d4bEAYG2FsK1Cuyke', 'customer', '2025-02-24 04:16:20', '2025-02-24 04:16:20'),
 (4, 'Zobbar', 'zobbar@gmail.com', '12345678', 'customer', NULL, '2025-02-24 10:59:26');
