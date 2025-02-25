@@ -10,28 +10,28 @@
 
      <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" name="name" value="{{ old('name', $user->name) }}" required>
+        <input type="text" name="name" class="form-control" value="{{ old('name', $user->name) }}" required>
     </div>
 
     <div>
         <label for="email">Email</label>
-        <input type="email" name="email" value="{{ old('email', $user->email) }}" required>
+        <input type="email" name="email" class="form-control" value="{{ old('email', $user->email) }}" required>
     </div>
 
     <!-- For each customer, show their fields -->
     @foreach ($user->customers as $customer)
         <div>
             <label for="phone_{{ $customer->id }}">Phone</label>
-            <input type="text" name="customers[{{ $customer->id }}][phone]" value="{{ old('customers.' . $customer->id . '.phone', $customer->phone) }}">
+            <input type="text" name="customers[{{ $customer->id }}][phone]" class="form-control" value="{{ old('customers.' . $customer->id . '.phone', $customer->phone) }}">
         </div>
 
         <div>
             <label for="address_{{ $customer->id }}">Address</label>
-            <input type="text" name="customers[{{ $customer->id }}][address]" value="{{ old('customers.' . $customer->id . '.address', $customer->address) }}">
+            <input type="text" name="customers[{{ $customer->id }}][address]" class="form-control" value="{{ old('customers.' . $customer->id . '.address', $customer->address) }}">
         </div>
     @endforeach
 
-    <button type="submit">Update</button>
+    <button type="submit" class="btn btn-primary mt-4">Update</button>
 	
             <!-- Delete Form -->
             <form action="{{ route('admin.customers.destroy', $customer) }}" method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure you want to delete this customer?');">    
